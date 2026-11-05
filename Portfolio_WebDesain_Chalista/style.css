@@ -1,0 +1,147 @@
+/* Gaya utama website portofolio akademik */
+:root {
+  --navy: #073765;
+  --blue: #0754b8;
+  --blue-dark: #06345f;
+  --gold: #e0aa13;
+  --text: #263445;
+  --muted: #667789;
+  --line: #dce5ee;
+  --surface: #ffffff;
+  --background: #f4f7fb;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--text); background: var(--background); font-size: 14px; line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+.container { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+.topbar { background: #052d52; color: #eaf3ff; font-size: 11px; }
+.topbar-inner { min-height: 30px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.topbar a { margin-left: 18px; }
+.site-header { background: var(--navy); color: white; box-shadow: 0 3px 12px #0a2f501c; }
+.header-inner { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand-mark { background: white; color: var(--navy); font-weight: 900; letter-spacing: -1px; padding: 7px 9px; border-radius: 4px; font-size: 18px; }
+.brand strong, .brand small { display: block; }
+.brand strong { font-size: 14px; }
+.brand small { color: #c9dcf1; font-size: 11px; }
+.nav { display: flex; gap: 24px; align-items: center; font-size: 12px; }
+.nav a { color: #eef6ff; padding: 24px 0; border-bottom: 2px solid transparent; }
+.nav a:hover { border-color: var(--gold); }
+.menu-toggle { display: none; border: 1px solid #ffffff66; color: white; background: transparent; border-radius: 6px; padding: 7px 10px; font-size: 18px; }
+.page-layout { display: grid; grid-template-columns: minmax(0, 1fr) 285px; gap: 22px; padding-top: 24px; padding-bottom: 40px; align-items: start; }
+.main-column { min-width: 0; }
+.hero { min-height: 225px; background: linear-gradient(115deg, #063e78, #0759bd); color: white; padding: 28px 34px; display: flex; align-items: center; gap: 28px; border-radius: 5px; box-shadow: 0 5px 18px #0637651c; }
+/* Bingkai foto profil */
+.avatar {
+  width: 142px;
+  height: 142px;
+  min-width: 142px;
+  min-height: 142px;
+  flex: 0 0 142px;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0;
+  background: #f4f7fb;
+  display: block;
+  box-shadow: 0 0 0 5px #ffffff30;
+}
+
+/* Gambar di dalam bingkai */
+.avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 50%;
+}
+.hero-copy { max-width: 680px; }
+.eyebrow { color: #d7e9ff; font-size: 11px; letter-spacing: .8px; text-transform: uppercase; margin: 0 0 5px; }
+.hero h1 { font-size: clamp(22px, 3vw, 30px); line-height: 1.2; margin: 0 0 10px; }
+.hero p:not(.eyebrow) { color: #e5f1ff; font-size: 13px; margin: 0 0 16px; }
+.hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 9px 14px; border-radius: 4px; font-size: 12px; font-weight: 700; transition: .2s; }
+.btn-gold { background: var(--gold); color: #172b3e; }
+.btn-gold:hover { background: #f1bd2d; transform: translateY(-1px); }
+.btn-outline { border: 1px solid #ffffffa8; color: white; }
+.btn-outline:hover { background: #ffffff18; }
+.btn-full { display: block; text-align: center; margin-top: 14px; }
+.section { margin-top: 28px; scroll-margin-top: 20px; }
+.section-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.section-heading h2 { margin: 0; color: var(--navy); font-size: 17px; white-space: nowrap; }
+.section-heading span { height: 2px; width: 90px; background: var(--gold); margin-top: 7px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 5px; padding: 20px; box-shadow: 0 2px 9px #173c5d08; }
+.about-panel p { margin: 0 0 10px; font-size: 13px; }
+.panel h3 { color: var(--navy); font-size: 13px; margin: 15px 0 9px; }
+.detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; }
+.detail-grid div { border-bottom: 1px solid #edf1f5; padding: 8px 0; }
+.detail-grid span, .detail-grid strong { display: block; }
+.detail-grid span { color: var(--muted); font-size: 11px; }
+.detail-grid strong { font-size: 12px; }
+.academic-intro p { margin: 0 0 14px; color: var(--muted); font-size: 12px; }
+.academic-intro h3 { margin-top: 0; }
+.semester-list { display: grid; gap: 18px; }
+.semester-block h4 { margin: 0 0 7px; color: var(--navy); font-size: 13px; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; min-width: 570px; font-size: 11px; }
+th { background: var(--navy); color: white; text-align: left; padding: 8px 9px; font-weight: 700; }
+td { padding: 8px 9px; border-bottom: 1px solid #e8edf3; }
+tbody tr:nth-child(even) { background: #f3f6fa; }
+tbody tr:last-child td { border-bottom: 0; }
+.placeholder-row td { color: #78889a; font-style: italic; }
+.university-panel p { margin: 0 0 12px; font-size: 13px; }
+.text-link { color: #0754b8; font-weight: 700; font-size: 12px; }
+.text-link:hover { text-decoration: underline; }
+.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.contact-grid b { color: var(--navy); font-size: 12px; }
+.contact-grid p { font-size: 12px; color: var(--muted); margin: 7px 0 0; }
+.sidebar { display: grid; gap: 18px; position: sticky; top: 18px; }
+.side-card { background: white; border: 1px solid var(--line); border-radius: 9px; padding: 17px; box-shadow: 0 4px 14px #123b5d0c; }
+.side-title { display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #e5ebf1; padding-bottom: 9px; margin-bottom: 8px; }
+.side-title span { color: var(--gold); font-size: 16px; }
+.side-title h2 { color: var(--navy); font-size: 13px; margin: 0; }
+.side-card > a:not(.btn) { display: block; color: #0754b8; font-size: 12px; padding: 8px 2px; border-bottom: 1px solid #edf1f5; }
+.side-card > a:not(.btn):hover { padding-left: 7px; color: #032e59; }
+.current-label { font-size: 11px; color: var(--muted); margin: 0 0 9px; }
+.schedule-line { border-left: 3px solid var(--gold); padding: 2px 0 4px 9px; margin: 8px 0; }
+.schedule-line b, .schedule-line span, .schedule-line small { display: block; }
+.schedule-line b { color: var(--navy); font-size: 11px; }
+.schedule-line span { font-size: 12px; font-weight: 700; }
+.schedule-line small { color: var(--muted); font-size: 10px; }
+.side-description { color: var(--muted); font-size: 11px; margin: 0; }
+.footer { background: #052f57; color: #eaf3fc; padding: 28px 0 14px; }
+.footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 32px; }
+.footer h3 { font-size: 12px; margin: 0 0 8px; color: white; }
+.footer p, .footer a { color: #c9d9e9; font-size: 11px; }
+.footer p { margin: 0; }
+.footer a { display: block; margin: 5px 0; }
+.footer a:hover { color: white; text-decoration: underline; }
+.copyright { text-align: center; border-top: 1px solid #ffffff25; padding-top: 13px; margin: 20px auto 0 !important; width: min(1160px, calc(100% - 40px)); font-size: 10px !important; }
+@media (max-width: 850px) {
+  .page-layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .side-card:first-child { grid-row: span 2; }
+}
+@media (max-width: 600px) {
+  .container { width: min(100% - 26px, 1160px); }
+  .topbar-inner { font-size: 9px; }
+  .header-inner { min-height: 60px; flex-wrap: wrap; padding: 10px 0; }
+  .menu-toggle { display: block; }
+  .nav { display: none; width: 100%; flex-direction: column; align-items: stretch; gap: 0; padding: 4px 0; }
+  .nav.open { display: flex; }
+  .nav a { padding: 10px 2px; border-bottom: 1px solid #ffffff25; }
+  .page-layout { padding-top: 14px; gap: 18px; }
+  .hero { padding: 24px 20px; flex-direction: column; align-items: flex-start; gap: 20px; }
+  .avatar { width: 100px; height: 100px; flex: 0 0 100px;}
+  .hero h1 { font-size: 23px; }
+  .section { margin-top: 22px; }
+  .panel { padding: 14px; }
+  .detail-grid { grid-template-columns: 1fr; }
+  .sidebar { grid-template-columns: 1fr; }
+  .side-card:first-child { grid-row: auto; }
+  .contact-grid, .footer-grid { grid-template-columns: 1fr; gap: 16px; }
+}
